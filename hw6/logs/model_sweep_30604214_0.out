@@ -1,0 +1,72 @@
+Task ID: 0
+Model: distilbert-base-uncased
+LR: 1e-4
+Epochs: 7
+Specified arguments: Namespace(small_subset=False, num_epochs=7, lr=0.0001, batch_size=32, device='cuda', model='distilbert-base-uncased')
+Loading the dataset ...
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.63975}
+ - Average validation metrics: accuracy={'accuracy': 0.6792048929663609}
+Epoch 2 training:
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.71925}
+ - Average validation metrics: accuracy={'accuracy': 0.6926605504587156}
+Epoch 3 training:
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.836}
+ - Average validation metrics: accuracy={'accuracy': 0.6865443425076453}
+Epoch 4 training:
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.920375}
+ - Average validation metrics: accuracy={'accuracy': 0.6972477064220184}
+Epoch 5 training:
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.952875}
+ - Average validation metrics: accuracy={'accuracy': 0.6975535168195719}
+Epoch 6 training:
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.97375}
+ - Average validation metrics: accuracy={'accuracy': 0.7}
+Epoch 7 training:
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.98475}
+ - Average validation metrics: accuracy={'accuracy': 0.7048929663608563}
+torch.cuda.memory_allocated: 0.267210GB
+torch.cuda.memory_reserved: 3.488281GB
+torch.cuda.max_memory_reserved: 3.488281GB
+Sun Apr  5 16:02:29 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 555.42.06              Driver Version: 555.42.06      CUDA Version: 12.5     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:CA:00.0 Off |                    0 |
+| N/A   57C    P0             89W /  300W |    4089MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   2191414      C   python                                       4080MiB |
++-----------------------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.7048929663608563}
+ - Average TEST metrics: accuracy={'accuracy': 0.7056762438682551}

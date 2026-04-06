@@ -1,0 +1,98 @@
+Task ID: 13
+Type: prefix
+LR: 1e-4
+Epochs: 9
+Specified arguments: Namespace(small_subset=False, num_epochs=9, lr=0.0001, batch_size=32, device='cuda', model='roberta-base', type='prefix', prefix_length=128)
+Loading the dataset ...
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 1 took 67.07053470611572 seconds
+Epoch 2 training:
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 2 took 66.03855848312378 seconds
+Epoch 3 training:
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 3 took 66.18229532241821 seconds
+Epoch 4 training:
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 4 took 64.17780184745789 seconds
+Epoch 5 training:
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 5 took 66.9710648059845 seconds
+Epoch 6 training:
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 6 took 66.92886233329773 seconds
+Epoch 7 training:
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 7 took 66.96929049491882 seconds
+Epoch 8 training:
+ ===> Epoch 8
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 8 took 66.39683675765991 seconds
+Epoch 9 training:
+ ===> Epoch 9
+ - Average training metrics: accuracy={'accuracy': 0.620875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.6355991590749824}
+Epoch 9 took 64.12831020355225 seconds
+torch.cuda.memory_allocated: 0.951611GB
+torch.cuda.memory_reserved: 12.433594GB
+torch.cuda.max_memory_reserved: 12.433594GB
+Sun Apr  5 22:48:43 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 555.42.06              Driver Version: 555.42.06      CUDA Version: 12.5     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    Off |   00000000:81:00.0 Off |                    0 |
+| N/A   53C    P0            252W /  350W |   13251MiB /  46068MiB |     22%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1362072      C   python                                      13242MiB |
++-----------------------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average TEST metrics: accuracy={'accuracy': 0.6355991590749824}

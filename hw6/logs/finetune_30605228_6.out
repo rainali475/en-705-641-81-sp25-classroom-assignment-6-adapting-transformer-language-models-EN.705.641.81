@@ -1,0 +1,91 @@
+Task ID: 6
+Type: head
+LR: 1e-4
+Epochs: 7
+Specified arguments: Namespace(small_subset=False, num_epochs=7, lr=0.0001, batch_size=32, device='cuda', model='roberta-base', type='head', prefix_length=128)
+Loading the dataset ...
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.538875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.629292221443588}
+Epoch 1 took 57.626725912094116 seconds
+Epoch 2 training:
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.622}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.629292221443588}
+Epoch 2 took 55.627209186553955 seconds
+Epoch 3 training:
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.622}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.629292221443588}
+Epoch 3 took 55.90336847305298 seconds
+Epoch 4 training:
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.622}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.629292221443588}
+Epoch 4 took 54.74510359764099 seconds
+Epoch 5 training:
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.622}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average test metrics: accuracy={'accuracy': 0.629292221443588}
+Epoch 5 took 52.97258806228638 seconds
+Epoch 6 training:
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.622125}
+ - Average validation metrics: accuracy={'accuracy': 0.6214067278287462}
+ - Average test metrics: accuracy={'accuracy': 0.629292221443588}
+Epoch 6 took 52.43488264083862 seconds
+Epoch 7 training:
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.622125}
+ - Average validation metrics: accuracy={'accuracy': 0.6214067278287462}
+ - Average test metrics: accuracy={'accuracy': 0.629292221443588}
+Epoch 7 took 52.4287314414978 seconds
+torch.cuda.memory_allocated: 0.968091GB
+torch.cuda.memory_reserved: 6.162109GB
+torch.cuda.max_memory_reserved: 6.162109GB
+Sun Apr  5 20:39:42 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 555.42.06              Driver Version: 555.42.06      CUDA Version: 12.5     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          Off |   00000000:17:00.0 Off |                    0 |
+| N/A   60C    P0             88W /  300W |    6827MiB /  81920MiB |     43%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100 80GB PCIe          Off |   00000000:65:00.0 Off |                    0 |
+| N/A   58C    P0            297W /  300W |    6827MiB /  81920MiB |     91%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A    663012      C   python                                       6818MiB |
+|    1   N/A  N/A    663011      C   python                                       6818MiB |
++-----------------------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.6214067278287462}
+ - Average TEST metrics: accuracy={'accuracy': 0.629292221443588}

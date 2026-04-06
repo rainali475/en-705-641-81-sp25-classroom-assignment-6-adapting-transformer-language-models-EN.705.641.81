@@ -98,11 +98,12 @@ def evaluate_model(model, dataloader, device):
         # Hints:
         # - see the getitem function in the BoolQADataset class for how to access the input_ids and attention_mask
         # - use to() to move the tensors to the device
-
+        input_ids = batch["input_ids"].to(device)
+        attention_mask = batch["attention_mask"].to(device)
 
         # forward pass
         # name the output as `output`
-
+        output = model(input_ids=input_ids, attention_mask=attention_mask)
         # your code ends here
 
         predictions = output.logits
@@ -174,23 +175,28 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, test_dat
 
             # get the input_ids, attention_mask, and labels from the batch and put them on the device
             # Hints: similar to the evaluate_model function
-
+            input_ids = batch["input_ids"].to(device)
+            attention_mask = batch["attention_mask"].to(device)
+            labels = batch["labels"].to(device)
 
             # forward pass
             # name the output as `output`
             # Hints: refer to the evaluate_model function on how to get the predictions (logits)
-
+            output = mymodel(input_ids=input_ids, attention_mask=attention_mask)
+            predictions = output.logits
 
             # compute the loss using the loss function
-
+            batch_loss = loss(predictions, labels)
 
             # loss backward
-
+            batch_loss.backward()
 
             # update the model parameters with optimizer and lr_scheduler step
+            optimizer.step()
+            lr_scheduler.step()
 
             # zero the gradients
-
+            optimizer.zero_grad()
             # your code ends here
 
             predictions = torch.argmax(predictions, dim=1)

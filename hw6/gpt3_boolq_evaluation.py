@@ -4,14 +4,14 @@ from datasets import load_dataset
 
 client = OpenAI()
 client.organization = os.getenv("OPENAI_ORGANIZATION")
-# openai.api_key = os.getenv("OPENAI_API_KEY")
+OpenAI.api_key = os.getenv("OPENAI_API_KEY")
 boolq = load_dataset("boolq")
 
 context = ""
 for question, answer, passage in zip(boolq["train"][8:15]['question'], boolq["train"][8:15]['answer'], boolq["train"][8:15]['passage']):
     context += question + "?" + "\n" + passage + "\n" + str(answer) + "\n\n" 
 
-# print(context)
+print(context)
 
 #validate on 30 instances of BoolQ validation set
 correct_count = 0
@@ -31,4 +31,5 @@ for question, answer, passage in zip(boolq["validation"][0:30]['question'], bool
     if response.choices[0].text == str(answer):
         correct_count += 1
     print("-----------------------------")
+
 print(f"accuracy = {correct_count/30}")
